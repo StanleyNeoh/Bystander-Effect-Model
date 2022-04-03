@@ -112,7 +112,7 @@ to act
         fd 1
       ][
         let num-others ([nearby] of target - 1)
-        if (roll-dice (willingness-to-help / (1 + self-concious-coeff * (num-others) ^ dependence-exponent))) [
+        if (roll-dice (willingness-to-help / (1 + self-conscious-coeff * (num-others) ^ dependence-exponent))) [
           ;; num-others is squared due to compounding effect of crowd. Diffuse responsibility and conforming to social norms
           set help-state 2
         ]
@@ -287,8 +287,8 @@ SLIDER
 214
 191
 247
-self-concious-coeff
-self-concious-coeff
+self-conscious-coeff
+self-conscious-coeff
 0
 3
 3.0
