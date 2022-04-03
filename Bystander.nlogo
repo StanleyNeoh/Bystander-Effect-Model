@@ -96,6 +96,7 @@ to update-turtle-task ;;turtle procedure
     let task (min-one-of (patches with [is-task = true]) [distance myself])
     if (look-random) [
       set task (one-of (patches with [is-task = true]))
+      set look-random false
     ]
     if (task != NOBODY) [
       set target task
@@ -171,7 +172,7 @@ number-of-tasks
 number-of-tasks
 1
 100
-50.0
+100.0
 1
 1
 NIL
@@ -186,7 +187,7 @@ number-of-people
 number-of-people
 1
 100
-100.0
+84.0
 1
 1
 NIL
@@ -235,7 +236,7 @@ vicinity-radius
 vicinity-radius
 0
 20
-5.1
+4.8
 0.1
 1
 NIL
@@ -281,8 +282,8 @@ SLIDER
 initial-patience
 initial-patience
 0
-200
-48.0
+1000
+19.0
 1
 1
 NIL
@@ -297,7 +298,7 @@ self-conscious-coeff
 self-conscious-coeff
 0
 3
-3.0
+1.5
 0.1
 1
 NIL
@@ -721,7 +722,7 @@ NetLogo 6.2.2
     <enumeratedValueSet variable="initial-patience">
       <value value="100"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="self-concious-coeff">
+    <enumeratedValueSet variable="self-conscious-coeff">
       <value value="1"/>
     </enumeratedValueSet>
   </experiment>
@@ -750,7 +751,7 @@ NetLogo 6.2.2
     <enumeratedValueSet variable="initial-patience">
       <value value="100"/>
     </enumeratedValueSet>
-    <steppedValueSet variable="self-concious-coeff" first="0" step="0.1" last="3"/>
+    <steppedValueSet variable="self-conscious-coeff" first="0" step="0.1" last="3"/>
   </experiment>
   <experiment name="num-people" repetitions="100" runMetricsEveryStep="false">
     <setup>setup</setup>
@@ -774,7 +775,7 @@ NetLogo 6.2.2
     <enumeratedValueSet variable="initial-patience">
       <value value="100"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="self-concious-coeff">
+    <enumeratedValueSet variable="self-conscious-coeff">
       <value value="0.5"/>
       <value value="1"/>
       <value value="1.5"/>
@@ -802,7 +803,7 @@ NetLogo 6.2.2
     <enumeratedValueSet variable="initial-patience">
       <value value="100"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="self-concious-coeff">
+    <enumeratedValueSet variable="self-conscious-coeff">
       <value value="1.5"/>
     </enumeratedValueSet>
   </experiment>
