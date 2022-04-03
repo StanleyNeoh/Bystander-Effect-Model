@@ -10,6 +10,7 @@ patches-own[
 
 turtles-own[
   patience
+  look-random
   help-state
   target
 ]
@@ -52,6 +53,7 @@ to set-initial-turtle-vars
   set help-state 0
   set patience 0
   set target NOBODY
+  set look-random false
 end
 
 ;;;
@@ -92,6 +94,9 @@ end
 to update-turtle-task ;;turtle procedure
   (ifelse (help-state = 0) [
     let task (min-one-of (patches with [is-task = true]) [distance myself])
+    if (look-random) [
+      set task (one-of (patches with [is-task = true]))
+    ]
     if (task != NOBODY) [
       set target task
       set help-state 1
@@ -120,6 +125,7 @@ to act
       set patience patience - 1
     ][
       set help-state 0
+      set look-random true
     ]
   ] (help-state = 2) [
     if (distance target > 1)[
@@ -165,7 +171,7 @@ number-of-tasks
 number-of-tasks
 1
 100
-54.0
+50.0
 1
 1
 NIL
@@ -180,7 +186,7 @@ number-of-people
 number-of-people
 1
 100
-48.0
+100.0
 1
 1
 NIL
@@ -229,7 +235,7 @@ vicinity-radius
 vicinity-radius
 0
 20
-20.0
+5.1
 0.1
 1
 NIL
@@ -275,8 +281,8 @@ SLIDER
 initial-patience
 initial-patience
 0
-100
-100.0
+200
+48.0
 1
 1
 NIL
