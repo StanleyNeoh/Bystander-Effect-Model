@@ -187,7 +187,7 @@ number-of-people
 number-of-people
 1
 100
-50.0
+29.0
 1
 1
 NIL
@@ -283,7 +283,7 @@ initial-patience
 initial-patience
 0
 200
-100.0
+200.0
 1
 1
 NIL
@@ -298,7 +298,7 @@ self-conscious-coeff
 self-conscious-coeff
 0
 3
-1.5
+3.0
 0.1
 1
 NIL
@@ -832,6 +832,32 @@ NetLogo 6.2.2
     <enumeratedValueSet variable="self-conscious-coeff">
       <value value="1.5"/>
     </enumeratedValueSet>
+  </experiment>
+  <experiment name="willingness-to-help" repetitions="100" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <enumeratedValueSet variable="number-of-tasks">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="vicinity-radius">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="self-conscious-coeff">
+      <value value="1.5"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dependence-exponent">
+      <value value="0.5"/>
+      <value value="1"/>
+      <value value="1.5"/>
+      <value value="2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-people">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-patience">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="willingness-to-help" first="25" step="2" last="100"/>
   </experiment>
 </experiments>
 @#$#@#$#@
