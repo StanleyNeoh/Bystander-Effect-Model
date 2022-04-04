@@ -187,7 +187,7 @@ number-of-people
 number-of-people
 1
 100
-84.0
+50.0
 1
 1
 NIL
@@ -236,7 +236,7 @@ vicinity-radius
 vicinity-radius
 0
 20
-4.8
+10.0
 0.1
 1
 NIL
@@ -282,8 +282,8 @@ SLIDER
 initial-patience
 initial-patience
 0
-1000
-19.0
+200
+100.0
 1
 1
 NIL
@@ -803,6 +803,32 @@ NetLogo 6.2.2
     <enumeratedValueSet variable="initial-patience">
       <value value="100"/>
     </enumeratedValueSet>
+    <enumeratedValueSet variable="self-conscious-coeff">
+      <value value="1.5"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="patience" repetitions="100" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <enumeratedValueSet variable="number-of-tasks">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="vicinity-radius">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dependence-exponent">
+      <value value="0.5"/>
+      <value value="1"/>
+      <value value="1.5"/>
+      <value value="2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="number-of-people">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="willingness-to-help">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="initial-patience" first="1" step="5" last="300"/>
     <enumeratedValueSet variable="self-conscious-coeff">
       <value value="1.5"/>
     </enumeratedValueSet>
