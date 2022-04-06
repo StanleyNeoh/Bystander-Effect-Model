@@ -187,7 +187,7 @@ number-of-people
 number-of-people
 1
 100
-29.0
+97.0
 1
 1
 NIL
@@ -251,7 +251,7 @@ willingness-to-help
 willingness-to-help
 0
 100
-100.0
+50.0
 1
 1
 NIL
@@ -283,7 +283,7 @@ initial-patience
 initial-patience
 0
 200
-200.0
+100.0
 1
 1
 NIL
@@ -298,7 +298,7 @@ self-conscious-coeff
 self-conscious-coeff
 0
 3
-3.0
+1.0
 0.1
 1
 NIL
@@ -858,6 +858,146 @@ NetLogo 6.2.2
       <value value="100"/>
     </enumeratedValueSet>
     <steppedValueSet variable="willingness-to-help" first="25" step="2" last="100"/>
+  </experiment>
+  <experiment name="effect-vicinity" repetitions="100" sequentialRunOrder="false" runMetricsEveryStep="true">
+    <setup>setup</setup>
+    <go>go</go>
+    <enumeratedValueSet variable="number-of-tasks">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="vicinity-radius">
+      <value value="1"/>
+      <value value="5"/>
+      <value value="10"/>
+      <value value="15"/>
+      <value value="20"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="self-conscious-coeff">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dependence-exponent">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="number-of-people" first="1" step="2" last="100"/>
+    <enumeratedValueSet variable="initial-patience">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="willingness-to-help">
+      <value value="50"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="effect-patience" repetitions="100" sequentialRunOrder="false" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <enumeratedValueSet variable="number-of-tasks">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="vicinity-radius">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="self-conscious-coeff">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dependence-exponent">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="number-of-people" first="1" step="2" last="100"/>
+    <enumeratedValueSet variable="initial-patience">
+      <value value="5"/>
+      <value value="10"/>
+      <value value="20"/>
+      <value value="50"/>
+      <value value="100"/>
+      <value value="200"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="willingness-to-help">
+      <value value="50"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="effect-willingness" repetitions="100" sequentialRunOrder="false" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <enumeratedValueSet variable="number-of-tasks">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="vicinity-radius">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="self-conscious-coeff">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dependence-exponent">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="number-of-people" first="1" step="2" last="100"/>
+    <enumeratedValueSet variable="initial-patience">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="willingness-to-help">
+      <value value="20"/>
+      <value value="40"/>
+      <value value="60"/>
+      <value value="80"/>
+      <value value="100"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="effect-sc" repetitions="100" sequentialRunOrder="false" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <enumeratedValueSet variable="number-of-tasks">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="vicinity-radius">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="self-conscious-coeff">
+      <value value="0"/>
+      <value value="0.3"/>
+      <value value="0.6"/>
+      <value value="1"/>
+      <value value="1.3"/>
+      <value value="1.6"/>
+      <value value="2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dependence-exponent">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="number-of-people" first="1" step="2" last="100"/>
+    <enumeratedValueSet variable="initial-patience">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="willingness-to-help">
+      <value value="50"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="effect-de" repetitions="100" sequentialRunOrder="false" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <enumeratedValueSet variable="number-of-tasks">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="vicinity-radius">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="self-conscious-coeff">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="dependence-exponent">
+      <value value="0"/>
+      <value value="0.3"/>
+      <value value="0.6"/>
+      <value value="1"/>
+      <value value="1.3"/>
+      <value value="1.6"/>
+      <value value="2"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="number-of-people" first="1" step="2" last="100"/>
+    <enumeratedValueSet variable="initial-patience">
+      <value value="100"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="willingness-to-help">
+      <value value="50"/>
+    </enumeratedValueSet>
   </experiment>
 </experiments>
 @#$#@#$#@
